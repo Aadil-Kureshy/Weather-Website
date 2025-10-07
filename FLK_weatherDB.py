@@ -27,7 +27,7 @@ def NewCity():
         city2 = city1[0].capitalize()
         country = city1[1].strip().upper()
         print(city2, country)
-        API_KEY = '29d7b2f6bca9e3d53eccb79eab7252e5'
+        API_KEY = 'PUT KEY FROM OPENWEATHER HERE'
         API_URL = ('http://api.openweathermap.org/data/2.5/weather?q={},{}&mode=json&units=metric&appid={}')
         data = requests.get(API_URL.format(city, country, API_KEY)).json()
         info = city2 + ", " + country
@@ -92,7 +92,7 @@ def Weather():
         city2 = city1[0]
         country = city1[1]
         print(city2, country)
-        API_KEY = '29d7b2f6bca9e3d53eccb79eab7252e5'
+        API_KEY = 'PUT KEY FROM OPEN WEATHER HERE'
         API_URL = ('http://api.openweathermap.org/data/2.5/weather?q={},{}&mode=json&units=metric&appid={}')
         data = requests.get(API_URL.format(city, country, API_KEY)).json()
         temp = round(data['main']['temp'], 1)
@@ -137,3 +137,4 @@ def Weather():
 if __name__ == "__main__":
 
         app.run()
+
