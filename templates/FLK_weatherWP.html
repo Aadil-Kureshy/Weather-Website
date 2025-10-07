@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Results</title>
+    <style>
+        h1{font-size: 38px;  font-weight:bolder; border-radius: 8px; background-color:#63B358; color:#227515;}
+    </style>
+</head>
+<body style="background-color: #43A8EE;">
+    <form action = "http://localhost:5000" method="post" id="back">
+        <input type="submit" value="Back" style="font-size: 28px; width: 125px; position:absolute; border-width: 2px; border-radius: 8px; background-color:#63B358; color:#227515;">
+    </form>
+    <img src="../static/GoldGlobe.png" height="255px" width="290px" style="position:absolute; margin-left:0px; margin-top:212px;">
+    <img src="../static/GoldGlobe.png" height="255px" width="290px" style="position:absolute; margin-left:1060px; margin-top:212px;">
+    <div style="background-color:#EFD229; width:750px; height:679px; margin-left:300px; margin-right:300px; position: absolute; margin-top:0px;">
+        <center>
+            <br>
+            <h1 style="width: 400px;">Current Weather: {{city}}, {{country}}</h1>
+            <h1 style="width:300px; font-size:28px;">{{day}} - {{date}}</h1>
+        </center><br><br>
+        <h1 style="width:260px; font-size:28px; position:absolute; margin-left:85px; text-align:center;">Temp: {{temp}}</h1>
+        <h1 style="width:300px; position:absolute; margin-left:365px; margin-top:17px; text-align:center;">Description:<br>{{description}}</h1><br><br><br>
+        <h1 style="width:260px; font-size:28px; position:absolute; margin-left:85px; text-align:center;">Feels Like: {{feels}}</h1><br><br><br>
+        <center>
+            <h1 style="width:500px; font-size:28px; text-align:center;">Temperature Range: {{min_max_temp}}</h1>
+            <h1 style="width:300px; font-size:28px; text-align:center;">Humidity: {{humidity}}</h1>
+            <h1 style="width:300px; font-size:28px; text-align:center;">Wind Speed: {{windspeed}}</h1>
+            <h1 style="width:250px; font-size:28px; text-align:center;">Wind Direction: {{wind_degrees}}</h1>
+        </center>
+    </div>
+</body>
+</html>
