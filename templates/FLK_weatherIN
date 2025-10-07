@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Seeker Database</title>
+    <style>
+    h1{font-size: 38px;  font-weight:bolder; border-radius: 8px; background-color:#63B358; color:#227515;}
+    select{font-size: 27px; font-weight:bolder; border-radius: 8px; color:#227515; width: 300px;}
+    label{font-size: 32px;  font-weight:bolder; border-radius: 8px; background-color:#63B358; color:#227515;}
+    </style>
+</head>
+<body style="background-color: #43A8EE;">
+<center>
+<h1 style="width: 500px;">Weather Seeker Database</h1>
+    <form action="http://localhost:5000/city" method="post" id="city1">
+        <label for="City" style="display:inline-block; width: 300px">Select City Here:</label><br><br>
+        <select name="City" id="City">
+            {% for i in list1 %}
+            <option>{{i}}</option>
+            {%endfor%}
+        </select><br><br>
+        <input type="submit" value="Submit" style="font-weight:bolder;font-size: 38px; width: 155px; border-width: 2px; border-radius: 8px; background-color:#63B358; color:#227515;;">
+    </form><br><br>
+    <form action="http://localhost:5000/newcity" method="post" id="newcity">
+        <label for="newcity_in" style="display:inline-block; width: 300px">Enter New City:</label><br><br>
+        <input type="text" id="newcity_in" name="newcity_in" style="font-weight:bolder; border-radius: 8px; color:#227515; font-size:27px; width:300px;"><br><br>
+        <input type="submit" value="Submit" style="font-weight:bolder;font-size: 38px; width: 155px; border-width: 2px; border-radius: 8px; background-color:#63B358; color:#227515;;">
+    </form>
+</center>
+<img src="../static/GoldGlobe.png" height="255px" width="290px" style="position:absolute; margin-left:0px; margin-top:-230px;">
+<img src="../static/GoldGlobe.png" height="255px" width="290px" style="position:absolute; margin-left:1060px; margin-top:-230px;">
+</body>
+</html>
