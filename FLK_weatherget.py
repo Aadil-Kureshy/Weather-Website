@@ -2,7 +2,7 @@
 import requests
 city = "London"
 country = "GB"
-API_KEY = '29d7b2f6bca9e3d53eccb79eab7252e5'
+API_KEY = 'PUT OPENWEATHER API KEY HERE'
 API_URL = ('http://api.openweathermap.org/data/2.5/weather?q={},{}&mode=json&units=metric&appid={}')
 data = requests.get(API_URL.format(city,country, API_KEY)).json()
 print(data)
@@ -36,5 +36,6 @@ else:
         wind_degrees = "W"
     if wind_degrees in range(294,337):
         wind_degrees = "NE"
+
 
     print(description, temp, feels, min_max_temp, humidity, windspeed, wind_degrees)
