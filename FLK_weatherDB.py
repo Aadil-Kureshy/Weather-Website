@@ -2,7 +2,7 @@ from flask import Flask, render_template, request
 import time
 import requests
 app = Flask(__name__)
-DB = 'C:\\Users\\aadil\\Coding\\FLK_weatherData'
+DB = 'FLK_weatherData'
 WDB = open(DB,'r+')
 
 @app.route('/', methods=['POST', 'GET'])
@@ -135,4 +135,5 @@ def Weather():
 
 
 if __name__ == "__main__":
+
         app.run()
